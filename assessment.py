@@ -88,14 +88,14 @@ def full_name(first_name, last_name):
 #        we're from the same place!", or "Hi 'full name here', where are you 
 #        from?" depending on what `is_hometown()` evaluates to.
 
-def hometown_greeting(town_name, first_name, last_name):
+# def hometown_greeting(town_name, first_name, last_name):
 
-	if is_hometown(town_name) == True:
-		print "Hi" full_name(first_name, last_name), "We're from the same place!"
-	else: 
-		print "Hi" full_name(first_name, last_name) "Where are you from?"
+# 	if is_hometown(town_name) == True:
+# 		print "Hi" full_name(first_name, last_name), "We're from the same place!"
+# 	else: 
+# 		print "Hi" full_name(first_name, last_name) "Where are you from?"
 
-	return None
+# 	return None
 
 #####################################################################
 
@@ -105,10 +105,27 @@ def hometown_greeting(town_name, first_name, last_name):
 #    inside of it. The outer function should take ``x``, an integer which
 #    defaults to 1. The inner function should take ``y`` and add ``x`` and ``y`` together.
 
+def increment(x):
+    def add(y):
+        return x + y
+    return add
+
 # 2. Call the function ``increment()`` with x = 5. Assign what is returned to a variable name, addfive. Call 
 #    addfive with y = 5. Call again with y = 20.
 
+addfive = increment(5)
+
+
 # 3. Make a function that takes in a number and a list of numbers. It should append
 #    the number to the list of numbers and return the list.
+
+num = 0
+num_list = []
+
+def make_adder(num, num_list):
+	myList = num_list.append(num)
+	print myList
+	return myList
+
 
 #####################################################################
